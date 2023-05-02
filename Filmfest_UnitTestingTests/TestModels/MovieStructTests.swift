@@ -33,4 +33,11 @@ class MovieStructTests: XCTestCase {
         XCTAssertEqual(movie.releaseDate, "1987")
     }
     
+    func testEquatable_ReturnsTrue() {
+        let movie1 = Movie(title: "Romantic Comedy")
+        let movie2 = Movie(title: "Romantic Comedy")
+
+        XCTAssertEqual(movie1, movie2)
+        XCTAssertEqual(movie1.title, movie2.title)
+    }
 }
